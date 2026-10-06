@@ -200,7 +200,7 @@ body {
 }
 @media (max-width: 1000px) {
   .about-conta {
-    margin-top: 40rem;
+    margin-top: 25rem;
     font-size: 2rem;
     color: #d3d3d3;
     width: 100%;
@@ -251,6 +251,7 @@ body {
   height: 3rem;
   color: var(--scondrey-color);
   width: 16rem;
+  font-size: 4rem;
 }
 
 /* end services */
