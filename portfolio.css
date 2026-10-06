@@ -20,7 +20,7 @@ body {
   position: absolute;
   width: 100%;
   height: 600px;
-  opacity: 0.5;
+  opacity: 0.9;
   margin-top: -10px;
 }
 
@@ -106,7 +106,6 @@ body {
 }
 .text .hi span {
   color: var(--scondrey-color);
-  /* margin-right: 4rem; */
   font-size: inherit;
   font-weight: bold;
 }
@@ -119,7 +118,12 @@ body {
 
 @media (max-width: 1000px) {
   .text {
-    display: none;
+  margin-top: 10rem;
+  margin-left: 1rem;
+  width: 50%;
+  }
+  .text .hi {
+    font-size: 3rem;
   }
   .navbar .container .navbar-nav a:hover,
   .navbar .container .navbar-nav a:active,
@@ -186,9 +190,10 @@ body {
   justify-content: center;
 }
 .row img {
-  height: 100%;
+  height: 80%;
   width: 100%;
-  border-radius: 6%;
+  border-radius: 6%; 
+  opacity: 0.6;
 }
 .row .cord-body {
   background-color: #060a0b;
@@ -232,17 +237,19 @@ body {
 }
 .card-services {
   border: solid 1px rgb(213, 210, 210);
-  margin-left: 3px;
-  margin-right: 3px;
-  padding-top: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 2rem;
   padding-bottom: 10px;
   border-radius: 10px;
+  border-color: #380a1a;
+  height: 13rem;
+  background-color:#2b0814;
 }
+
 .philm {
   height: 3rem;
   color: var(--scondrey-color);
-  padding-left: 0;
-  padding-right: 0;
   width: 16rem;
 }
 
