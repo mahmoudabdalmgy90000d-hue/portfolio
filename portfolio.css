@@ -3,7 +3,6 @@
   --scondrey-color: #871625;
   --main-color: #d3d3d3;
 }
-
 body {
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
@@ -22,6 +21,10 @@ body {
   height: 600px;
   opacity: 0.9;
   margin-top: -10px;
+}
+.logo {
+  width: 100px;
+  border-radius: 20px;
 }
 
 .navbar {
@@ -69,6 +72,12 @@ body {
     margin-left: 5%;
     margin-right: 5%;
   }
+
+}
+@media (max-width: 950px) {
+    .img-fluid1 {
+    height: 450px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -97,17 +106,55 @@ body {
 .text {
   margin-top: 12rem;
   margin-left: 10rem;
-  height: 100px;
+  height: 300px;
 }
+
+
+
 .text .hi {
   margin-bottom: 20px;
   text-align: center;
   font-size: 4.5rem;
+  margin-left: 50px;
+
 }
+.text .hi {
+  width: 8.7ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  animation: typing  7s steps(11) infinite , blink 1s step-end infinite;
+}
+@keyframes typing {
+  0% {width: 0;}
+  60% {width: 8.7ch;}
+  90% {width: 8.7ch;}
+  100% {width: 0ch;}
+}
+@keyframes blink {
+  50% { border-color: transparent;}
+}
+
+.text  p {
+  width: 29ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: posh  7s steps(60) infinite , blink 1s step-end infinite;
+}
+@keyframes posh {
+  0% {width: 0;}
+  60% {width: 29ch;}
+  90% {width: 29ch;}
+  100% {width: 0ch;}
+}
+
+
 .text .hi span {
   color: var(--scondrey-color);
   font-size: inherit;
   font-weight: bold;
+  margin-bottom: auto;
+  margin-right: auto;
 }
 .text .fs-5 {
   margin-top: 0;
@@ -122,14 +169,26 @@ body {
   margin-left: 1rem;
   width: 50%;
   }
+    .text p {
+    font-size: 15px;
+
+  }
   .text .hi {
     font-size: 3rem;
+    margin-left: 10px;
+
   }
+
   .navbar .container .navbar-nav a:hover,
   .navbar .container .navbar-nav a:active,
   .navbar .container .navbar-nav a:focus {
     text-align: center;
     background-color: var(--scondrey-color);
+  }
+}
+@media (min-width: 1000px){
+    .text p {
+    font-size: 30px;
   }
 }
 .navbar .navbar-toggler {
@@ -190,17 +249,18 @@ body {
   justify-content: center;
 }
 .row img {
-  height: 80%;
+  height: 70%;
   width: 100%;
   border-radius: 6%; 
   opacity: 0.6;
+  /* margin-bottom: -10rem; */
 }
 .row .cord-body {
   background-color: #060a0b;
 }
 @media (max-width: 1000px) {
   .about-conta {
-    margin-top: 25rem;
+    margin-top: 8rem;
     font-size: 2rem;
     color: #d3d3d3;
     width: 100%;
@@ -208,7 +268,7 @@ body {
 }
 @media (min-width: 1000px) {
   .about {
-    margin-top: 25rem;
+    margin-top: 12rem;
     font-size: 2rem;
     color: #d3d3d3;
     margin-left: 10rem;
@@ -218,8 +278,10 @@ body {
 .about-heading {
   margin-left: auto;
   margin-right: auto;
-  letter-spacing: 4.3;
+  /* letter-spacing: 4.3; */
 }
+
+
 
 /* end about */
 /* start services */
@@ -239,14 +301,48 @@ body {
   border: solid 1px rgb(213, 210, 210);
   margin-left: 1rem;
   margin-right: 1rem;
-  padding-top: 2rem;
   padding-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 16px;
   border-color: #380a1a;
-  height: 13rem;
+  height: 14rem;
+  width: 19rem;
   background-color:#2b0814;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.card-services::before{
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    transparent 0%,
+      #82475c,
+    transparent 30%
 
+  );
+  animation: spain 3s linear infinite;
+  z-index: 0;
+}
+ .card-services::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background-color: #2b0814;
+  z-index: 0;
+  border-radius: 14px;
+ }
+ @keyframes spain {
+  to {
+    transform: rotate(360deg);
+  }
+ }
+ .card-services > * {
+  position: relative;
+  z-index: 1;
+ }
 .philm {
   height: 3rem;
   color: var(--scondrey-color);
@@ -456,10 +552,10 @@ font-size: 5rem;
   .overlay h3 { font-size: .85rem; }
   .overlay span { display: none; }
 }
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   .item { opacity: 1; transform: none; }
-}
+} */
 .photo ,
 .video {
     text-decoration: none;
@@ -495,9 +591,5 @@ footer {
 @media (max-width:575px) {
   .links {
     margin-right: 60px;
-  }
-  footer {
-    margin-bottom: 60%;
-    
   }
 }
